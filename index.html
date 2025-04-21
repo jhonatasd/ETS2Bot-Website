@@ -3,122 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ETS2BOT - Seu companheiro para Euro Truck Simulator 2">
+    <meta name="keywords" content="ETS2BOT, Euro Truck Simulator 2, Discord Bot, Comandos, Estatísticas">
+    <meta name="author" content="ETS2BOT Team">
+    <meta property="og:title" content="ETS2BOT">
+    <meta property="og:description" content="Seu companheiro perfeito para Euro Truck Simulator 2">
+    <meta property="og:image" content="bot-logo.png">
+    <meta property="og:url" content="https://ets2bot.com">
     <title>ETS2BOT - Seu companheiro para Euro Truck Simulator 2</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navbar -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">
-                <img src="logo.png" alt="ETS2BOT Logo">
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="logo.png" alt="ETS2BOT Logo">
+                </div>
+                <div class="nav-links">
+                    <a href="#home">Início</a>
+                    <a href="#commands">Comandos</a>
+                    <a href="#stats">Estatísticas</a>
+                    <a href="#premium" class="premium-btn">Premium</a>
+                    <a href="#add-bot" class="add-bot-btn">Adicionar ao Discord</a>
+                </div>
             </div>
-            <div class="nav-links">
-                <a href="#home">Início</a>
-                <a href="#commands">Comandos</a>
-                <a href="#stats">Estatísticas</a>
-                <a href="#premium" class="premium-btn">Premium</a>
-                <a href="#add-bot" class="add-bot-btn">Adicionar ao Discord</a>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <img src="bot-logo.png" alt="ETS2BOT" class="hero-logo">
-            <h1>ETS2BOT</h1>
-            <p>Seu companheiro perfeito para Euro Truck Simulator 2</p>
-            <div class="hero-buttons">
-                <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot&permissions=8" class="cta-button">Adicionar ao Discord</a>
-                <a href="#commands" class="secondary-button">Ver Comandos</a>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <img src="bot-logo.png" alt="ETS2BOT" class="hero-logo">
+                <h1>ETS2BOT</h1>
+                <p>Seu companheiro perfeito para Euro Truck Simulator 2</p>
+                <div class="hero-buttons">
+                    <a href="https://discord.com/oauth2/authorize?client_id=YOUR_BOT_ID&scope=bot&permissions=8" class="cta-button">Adicionar ao Discord</a>
+                    <a href="#commands" class="secondary-button">Ver Comandos</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Commands Section -->
-    <section id="commands" class="commands">
-        <h2>Comandos</h2>
-        <div class="commands-grid">
-            <div class="command-card">
-                <i class="fas fa-truck"></i>
-                <h3>/truck info</h3>
-                <p>Mostra informações sobre seu caminhão atual</p>
+        <!-- Commands Section -->
+        <section id="commands" class="commands">
+            <h2>Comandos</h2>
+            <div class="commands-grid">
+                <article class="command-card">
+                    <i class="fas fa-truck" aria-hidden="true"></i>
+                    <h3>/truck info</h3>
+                    <p>Mostra informações sobre seu caminhão atual</p>
+                </article>
+                <article class="command-card">
+                    <i class="fas fa-map-marked-alt" aria-hidden="true"></i>
+                    <h3>/route calculate</h3>
+                    <p>Calcula a melhor rota entre duas cidades</p>
+                </article>
+                <!-- Adicione mais comandos aqui -->
             </div>
-            <div class="command-card">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>/route calculate</h3>
-                <p>Calcula a melhor rota entre duas cidades</p>
-            </div>
-            <!-- Adicione mais comandos aqui -->
-        </div>
-    </section>
+        </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats">
-        <h2>Estatísticas</h2>
-        <div class="stats-container">
-            <div class="stat-card">
-                <i class="fas fa-server"></i>
-                <h3>Servidores</h3>
-                <p id="server-count">0</p>
+        <!-- Stats Section -->
+        <section id="stats" class="stats">
+            <h2>Estatísticas</h2>
+            <div class="stats-container">
+                <div class="stat-card">
+                    <i class="fas fa-server" aria-hidden="true"></i>
+                    <h3>Servidores</h3>
+                    <p id="server-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <h3>Usuários</h3>
+                    <p id="user-count">0</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-truck-moving" aria-hidden="true"></i>
+                    <h3>Viagens Registradas</h3>
+                    <p id="trips-count">0</p>
+                </div>
             </div>
-            <div class="stat-card">
-                <i class="fas fa-users"></i>
-                <h3>Usuários</h3>
-                <p id="user-count">0</p>
-            </div>
-            <div class="stat-card">
-                <i class="fas fa-truck-moving"></i>
-                <h3>Viagens Registradas</h3>
-                <p id="trips-count">0</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Premium Section -->
-    <section id="premium" class="premium">
-        <h2>Premium</h2>
-        <div class="premium-plans">
-            <div class="premium-card">
-                <h3>Premium Mensal</h3>
-                <div class="price">R$9.99/mês</div>
-                <ul>
-                    <li>Comandos exclusivos</li>
-                    <li>Rotas personalizadas</li>
-                    <li>Suporte prioritário</li>
-                    <li>Estatísticas avançadas</li>
-                </ul>
-                <a href="https://discord.com/store" class="premium-button">Assinar</a>
+        <!-- Premium Section -->
+        <section id="premium" class="premium">
+            <h2>Premium</h2>
+            <div class="premium-plans">
+                <div class="premium-card">
+                    <h3>Premium Mensal</h3>
+                    <div class="price">R$9.99/mês</div>
+                    <ul>
+                        <li>Comandos exclusivos</li>
+                        <li>Rotas personalizadas</li>
+                        <li>Suporte prioritário</li>
+                        <li>Estatísticas avançadas</li>
+                    </ul>
+                    <a href="https://discord.com/store" class="premium-button">Assinar</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Terms Section -->
-    <section id="terms" class="terms">
-        <h2>Termos e Políticas</h2>
-        <div class="terms-container">
-            <a href="terms.html" class="terms-link">Termos de Serviço</a>
-            <a href="privacy.html" class="terms-link">Política de Privacidade</a>
-        </div>
-    </section>
+        <!-- Terms Section -->
+        <section id="terms" class="terms">
+            <h2>Termos e Políticas</h2>
+            <div class="terms-container">
+                <a href="terms.html" class="terms-link">Termos de Serviço</a>
+                <a href="privacy.html" class="terms-link">Política de Privacidade</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-social">
-                <a href="https://discord.gg/YOUR_INVITE" class="discord-link">
-                    <i class="fab fa-discord"></i> Discord Oficial
+                <a href="https://discord.gg/YOUR_INVITE" class="discord-link" rel="noopener noreferrer">
+                    <i class="fab fa-discord" aria-hidden="true"></i> Discord Oficial
                 </a>
                 <a href="mailto:support@ets2bot.com" class="email-link">
-                    <i class="fas fa-envelope"></i> Suporte
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Suporte
                 </a>
             </div>
             <p>&copy; 2025 ETS2BOT. Todos os direitos reservados.</p>
         </div>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>
